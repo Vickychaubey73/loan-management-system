@@ -1,169 +1,204 @@
-# Loan Eligibility & Lead Management System
+# 🏦 Loan Eligibility & Lead Management System
 
-A complete Loan Eligibility & Lead Management System developed using Laravel 12, MySQL, Bootstrap 5, and REST API.
-
-## Features
-
-- Loan Application Form
-- Credit Score Generation
-- BRE (Business Rule Engine)
-- Loan Eligibility Result
-- REST API
-- Admin Login
-- Dashboard Analytics
-- Lead Management
-- Search Leads
-- View Lead
-- Edit Lead
-- Delete Lead
-- MySQL Database
+A Laravel 12 based Loan Eligibility and Lead Management System that allows customers to apply for loans, calculates credit score, evaluates eligibility using BRE (Business Rule Engine), provides REST APIs, and includes an Admin Dashboard for managing leads.
 
 ---
 
-## Technology Stack
+# 🚀 Features
+
+### Customer Module
+- Apply for Loan
+- Input Validation
+- Credit Score Generation
+- BRE Eligibility Check
+- Loan Approval/Rejection
+
+### Admin Module
+- Admin Login
+- Dashboard
+- Total Leads
+- Eligible Leads
+- Rejected Leads
+- Average Credit Score
+- Lead Management (View, Edit, Delete)
+- Search Leads
+
+### BRE Rule Management
+- Add Rule
+- Edit Rule
+- Delete Rule
+
+### REST API
+- Create Loan Lead
+- JSON Response
+- Credit Score
+- BRE Status
+
+---
+
+# 🛠 Tech Stack
 
 - Laravel 12
 - PHP 8.2
 - MySQL
 - Bootstrap 5
-- HTML
-- CSS
-- JavaScript
-- REST API
-- Git & GitHub
+- Blade Template
+- Postman
+- XAMPP
 
 ---
 
-## Installation
+# 📂 Project Structure
 
-```bash
-git clone https://github.com/Vickychaubey73/loan-management-system.git
-
-cd loan-management
-
-composer install
-
-cp .env.example .env
-
-php artisan key:generate
-
-php artisan migrate
-
-php artisan serve
+```
+app/
+routes/
+resources/
+public/
+database/
+screenshots/
 ```
 
 ---
 
-## API Endpoint
+# 🔌 REST API
 
-### Create Lead
+## Create Lead
 
 ```
 POST /api/leads
 ```
 
-Sample JSON
+### Sample Request
 
 ```json
 {
-    "full_name":"Vicky Chaubey",
-    "mobile":"9999999911",
-    "email":"vicky@gmail.com",
-    "dob":"2001-01-01",
-    "city":"Jaipur",
-    "pincode":"303002",
-    "loan_type":"Home Loan",
-    "employment_type":"Salaried",
-    "monthly_income":50000,
-    "loan_amount":300000,
-    "property_value":700000
+  "full_name":"Vicky Chaubey",
+  "mobile":"9999999911",
+  "email":"vicky@gmail.com",
+  "dob":"2001-01-01",
+  "city":"Jaipur",
+  "pincode":"303002",
+  "loan_type":"Home Loan",
+  "employment_type":"Salaried",
+  "monthly_income":50000,
+  "loan_amount":300000,
+  "property_value":700000
+}
+```
+
+### Sample Response
+
+```json
+{
+  "status":"success",
+  "lead_id":4,
+  "credit_score":736,
+  "bre_status":"Eligible",
+  "rejection_reason":""
 }
 ```
 
 ---
 
-## Screenshots
+# 📸 Project Screenshots
 
-### Home Page
+## Home Page
 
-![](screenshots/01-home-page.png)
+![Home](screenshots/01-home-page.png)
 
----
+## Loan Result
 
-### Loan Result
+![Loan Result](screenshots/02-loan-result.png)
 
-![](screenshots/02-loan-result.png)
+## Loan Result 2
 
----
+![Loan Result](screenshots/02-loan-result2.png)
 
-### Loan Result 2
+## Admin Login
 
-![](screenshots/02-loan-result2.png)
+![Admin Login](screenshots/03-admin-login.png)
 
----
+## Dashboard
 
-### Admin Login
+![Dashboard](screenshots/04-dashboard.png)
 
-![](screenshots/03-admin-login.png)
+## Dashboard Statistics
 
----
+![Dashboard](screenshots/05-dashboard2.png)
 
-### Dashboard
+## Lead Management
 
-![](screenshots/04-dashboard.png)
+![Leads](screenshots/06-leads.png)
 
----
+## Lead Management 2
 
-### Dashboard Analytics
+![Leads](screenshots/07-leads2.png)
 
-![](screenshots/04-dashboard1.png)
+## Edit Lead
 
----
+![Edit](screenshots/08-leads-edit.png)
 
-### Dashboard
+## REST API Testing (Postman)
 
-![](screenshots/05-dashboard2.png)
+![API](screenshots/09-api-postman.png)
 
----
+## Database Structure
 
-### Lead Management
-
-![](screenshots/06-leads.png)
+![Database](screenshots/11-database.png)
 
 ---
 
-### Lead Details
+# ⚙ Installation
 
-![](screenshots/07-leads2.png)
+```bash
+git clone https://github.com/Vickychaubey73/loan-management-system.git
+```
+
+```bash
+cd loan-management-system
+```
+
+```bash
+composer install
+```
+
+```bash
+cp .env.example .env
+```
+
+Configure Database
+
+```bash
+php artisan key:generate
+```
+
+```bash
+php artisan migrate
+```
+
+```bash
+php artisan serve
+```
 
 ---
 
-### Edit Lead
-
-![](screenshots/08-leads-edit.png)
-
----
-
-### Database Structure
-
-![](screenshots/11-database-structure.png)
-
----
-
-### Database
-
-![](screenshots/11-database.png)
-
-### REST API (Postman)
-
-![](screenshots/09-api-postman.png)
-
----
-
-## Author
+# 👨‍💻 Author
 
 **Vicky Chaubey**
 
-GitHub
+- GitHub: https://github.com/Vickychaubey73
 
-https://github.com/Vickychaubey73
+---
+
+# ⭐ Project Highlights
+
+- Laravel 12
+- REST API
+- Credit Score Logic
+- BRE Rule Engine
+- Admin Dashboard
+- CRUD Operations
+- Search Functionality
+- MySQL Database
+- Bootstrap UI
